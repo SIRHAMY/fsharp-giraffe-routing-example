@@ -13,7 +13,7 @@ let endpointsList = [
     GET [
         // Static routes
         route "/" (text "/: hello world")
-        route "/my-cool-endpoint" (text "/my-cool-endpoint: iamacoolendpoint")
+        route "/my-endpoint" (text "/my-endpoint: iamanendpoint")
         // Parameterized routes
         routef "/%s" (fun (aString : string) ->
             text ($"/aString: hit with val: {aString}"))
