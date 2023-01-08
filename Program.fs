@@ -11,13 +11,22 @@ open Giraffe.EndpointRouting
 
 let endpointsList = [
     GET [
+        // Static routes
         route "/" (text "/: hello world")
+        route "/my-cool-endpoint" (text "/my-cool-endpoint: iamacoolendpoint")
+        // Parameterized routes
         routef "/%s" (fun (aString : string) ->
             text ($"/aString: hit with val: {aString}"))
+        routef "/%s/%i" (fun (aString : string, anInt : int) ->
+            text ($"/aString/anInt: hit with vals: {aString}, {anInt}"))
     ]
+    // Foldered routes
     subRoute "/subroute/" [
         GET [
             route "one" (text "subroute/one: hit")
+        ]
+        subRoute "subsubroute/" [
+            route "one" (text "subroute/subsubroute/one: hit")
         ]
     ]
 ]
