@@ -1,3 +1,5 @@
+_This repo is now archived. Subscribers to the [HAMINION membership](https://hamy.xyz/labs/haminions) have access to updates as well as full source code access for dozens of tutorials and examples._
+
 # Overview
 
 This repo provides examples of common routing configurations for F# web servers running on [Giraffe](https://github.com/giraffe-fsharp/Giraffe).
